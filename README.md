@@ -172,10 +172,10 @@ CREATE TABLE banking.Bankers (
 
 ### 6. RUN [BankingSystemGUI.java](src/main/java/BankingSystemGUI.java)
 6.1. Ensure matching values:
-    Class.forName("org.postgresql.Driver");
-    String url = "jdbc:postgresql://localhost:54876/bankingsystem";
-    String user = "postgres";
-    String password = "postgres-Dockercs157a";
+Class.forName("org.postgresql.Driver");
+String url = "jdbc:postgresql://localhost:54876/bankingsystem";
+String user = "postgres";
+String password = "postgres-Dockercs157a";
 
 ## Dependencies
     * PostgreSQL JDBC Library
