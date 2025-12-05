@@ -137,7 +137,7 @@ CREATE TABLE banking.Bankers (
     Email VARCHAR(100) UNIQUE NOT NULL,
     PhoneNumber VARCHAR(20)
 );
-
+```
 3. SQLTools Setup
         3.1. Add new connection
             3.1.1. Connection name*     cs157a-BankingSystem
