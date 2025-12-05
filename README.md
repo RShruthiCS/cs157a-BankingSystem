@@ -138,35 +138,44 @@ CREATE TABLE banking.Bankers (
     PhoneNumber VARCHAR(20)
 );
 ```
-3. SQLTools Setup
-        3.1. Add new connection
-            3.1.1. Connection name*     cs157a-BankingSystem
-            3.1.2. Connect using*       Server and Port
-            3.1.3. Server Address*      localhost
-            3.1.4. Port*                54876
-            3.1.5. Database*            postgres
-            3.1.6. Username*            postgres
-            3.1.7. Use password         Save as plaintext in settings
-            3.1.8. Password*            postgres-Dockercs157a
-            3.1.9. Connection Timeout   15
-            3.1.10. [ Test Connection ] & [ Save Connection ]
-4. JDBC Driver Setup
-        4.1. Download PostgreSQL JDBC driver @ https://jdbc.postgresql.org/
-        4.2. Add downloaded .jar file to path: [/JDBCPROJECT/JDBCProject/lib/](lib)
-        4.3. Ensure the file is in Referenced Libraries
-        4.4. Ensure '[resources](src/main/resources)' folder is in Java Source Path & it contains the followinf files:
-            - [create_schema.sql](src/main/resources/create_schema.sql)
-            - [initialize_data.sql](src/main/resources/initialize_data.sql)
-        4.5. Ensure .sql files are connected to localhost
-5. RUN [Main.java](src/main/java/Main.java)
-        5.1. Ensure mathing values:
-            try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:54876/bankingsystem", "postgres", "postgres-Dockercs157a")) 
-6. RUN [BankingSystemGUI.java](src/main/java/BankingSystemGUI.java)
-        6.1. Ensure matching values:
-            Class.forName("org.postgresql.Driver");
-            String url = "jdbc:postgresql://localhost:54876/bankingsystem";
-            String user = "postgres";
-            String password = "postgres-Dockercs157a";
+### 3. SQLTools Setup
+3.1. Add new connection
+- 3.1.1. Connection name*     cs157a-BankingSystem
+- 3.1.2. Connect using*       Server and Port
+- 3.1.3. Server Address*      localhost
+- 3.1.4. Port*                54876
+- 3.1.5. Database*            postgres
+- 3.1.6. Username*            postgres
+- 3.1.7. Use password         Save as plaintext in settings
+- 3.1.8. Password*            postgres-Dockercs157a
+- 3.1.9. Connection Timeout   15
+- 3.1.10. [ Test Connection ] & [ Save Connection ]
+
+---
+  
+### 4. JDBC Driver Setup
+4.1. Download PostgreSQL JDBC driver @ https://jdbc.postgresql.org/
+4.2. Add downloaded .jar file to path: [/JDBCPROJECT/JDBCProject/lib/](lib)
+4.3. Ensure the file is in Referenced Libraries
+4.4. Ensure '[resources](src/main/resources)' folder is in Java Source Path & it contains the followinf files:
+    - [create_schema.sql](src/main/resources/create_schema.sql)
+    - [initialize_data.sql](src/main/resources/initialize_data.sql)
+4.5. Ensure .sql files are connected to localhost
+
+---
+
+### 5.. RUN [Main.java](src/main/java/Main.java)
+5.1. Ensure mathing values:
+    try (Connection conn = DriverManager.getConnection("jdbc:postgresql://localhost:54876/bankingsystem", "postgres", "postgres-Dockercs157a"))
+
+---
+
+### 6. RUN [BankingSystemGUI.java](src/main/java/BankingSystemGUI.java)
+6.1. Ensure matching values:
+    Class.forName("org.postgresql.Driver");
+    String url = "jdbc:postgresql://localhost:54876/bankingsystem";
+    String user = "postgres";
+    String password = "postgres-Dockercs157a";
 
 ## Dependencies
     * PostgreSQL JDBC Library
